@@ -1,0 +1,15 @@
+doctype html 
+html(lang="en")
+    head 
+        title #{pageTitle} | #{siteName}
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css")
+        link(rel="stylesheet" href="/static/css/styles.css")
+        
+    body
+        include partials/header
+        main 
+            block content
+        include partials/footer
+        script(src="/static/js/main.js", type="module") 
+        

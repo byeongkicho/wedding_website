@@ -1,0 +1,30 @@
+.story__box {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 960px;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.large__text {
+  font-size: 24px;
+  margin-top: 3em;
+  line-height: 1.8;
+}
+
+.img__box img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 200px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}

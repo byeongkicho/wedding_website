@@ -1,0 +1,20 @@
+extends base
+include mixins/rsvp
+
+
+block content 
+    if loggedIn 
+        div.rsvp__box
+            img(src="images/b2.png", width="350", height="350", alt="The Yoruba Traditional Wedding")
+            h2.text__center The Yoruba Traditional Wedding
+            h3.text__center__large September 29, 2023 | Atlanta, Georgia
+            include partials/countdown.pug
+    else
+        if errorMessage
+            div.rsvp__message__box 
+                span.rsvp__message=errorMessage
+        div.password__box
+            form(method="POST")
+                input(placeholder="Password", name="password", type="password", required)
+                input(type="submit", value="Log In")
+

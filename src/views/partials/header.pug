@@ -1,0 +1,43 @@
+header
+    a(href="/")
+        img(src="images/b2.png",width="100", height="100", alt="The Yoruba Traditional Wedding")
+    if loggedIn
+        div.nav_box
+            ul(class="nav-links")
+                li(class="nav-links__item_home")
+                    a(href="/") Home
+                        li(class="nav-links__item")
+                            a(href="/about") Our Story
+                        li(class="nav-links__item_2")
+                            a(href="/info") Info
+                        li(class="nav-links__item_3")
+                            a(href="/contact") Contact
+                        li(class="nav-links__item_4")
+                            a(href="/rsvp") RSVP
+                        li(class="nav-links__item_5")
+                            a(href="/Registry") Registry
+                        li(class="nav-links__item_last")
+                            a(href="/users/logout") Log Out
+                        nav(role="navigation", class="nav_links_mobile")
+                            div.burger
+                                div.line
+                                div.line
+                                div.line
+            ul(class="nav_links_mobile_ul")
+                li(class="nav_links_mobile__item")
+                    a(href="/") Home
+                li(class="nav_links_mobile__item")
+                    a(href="/about") Our Story
+                li(class="nav_links_mobile__item")
+                    a(href="/info") Info
+                li(class="nav_links_mobile__item")
+                    a(href="/contact") Contact
+                li(class="nav_links_mobile__item")
+                    a(href="/rsvp") RSVP
+                li(class="nav_links_mobile__item")
+                    a(href="/Registry") Registry
+                li(class="nav_links_mobile__item")
+                    a(href="/users/logout") Log Out
+    else
+        li(class="")
+            a(href="/contact") Contact

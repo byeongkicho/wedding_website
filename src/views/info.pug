@@ -1,0 +1,37 @@
+extends base
+
+block content 
+    div.info
+        div.info__box
+            div.info__box__left
+                div(class="row")
+                    div 09 / 29 /
+                    div.col
+                        h3 Friday
+            div.info__box_right
+                h4 Yoruba Traditional Wedding
+                div.eventDetail(class="row")
+                    div.col-2
+                        h4 Hotel
+                    div(class="col col-md-8")
+                        h4 Hilton Atlanta Northeast Hotel (Castle on the Hill)
+                div.row
+                    div.col-2
+                        h4 Address
+                    div.hotel__box(class="col col-md-8")
+                        h1 5993 Peachtree Industrial Blvd, Peachtree Corners, GA 30092
+                div.row
+                    div.col-2
+                        h4 Detail
+                    div.hotel__box(class="col col-md-8")
+                        h1 This is Discounted deal Link for our wedding guest. Please book your room before 09/01/2023
+                div.row
+                    div.col-2
+                        h4 Book
+                    div.hotel__box(class="col col-md-8")
+                            a.button-hotel(target="_blank", href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=ATLHPHF&groupCode=SKW&arrivaldate=2023-09-28&departuredate=2023-09-30&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT") Book a room
+        div.hotel__box
+                    div.hotel__box__item
+                        img(src="images/hiltonHotel.jpeg" alt="hiltonHotel in the Atlanta area")
+                    div.hotel__box__item
+                        iframe(width='600' height="450" style="border:0" loading="lazy" allowfullscreen src=`https://www.google.com/maps/embed/v1/place?q=5993%20Peachtree%20Industrial%20Blvd%2C%20Peachtree%20Corners%2C%20GA%2030092&key=${googleApiKey}`)

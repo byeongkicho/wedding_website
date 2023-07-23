@@ -1,0 +1,33 @@
+extends base.pug
+include mixins/rsvp
+
+block content 
+    div.rsvp__box
+        h2.text__center RSVP
+        h5.text__center__large We are so excited to celebrate with you <br> Please respond by August 31, 2023
+        <br> Please only RSVP for those listed on your invitation
+        if errorMessage 
+            span=errorMessage
+        if successMessage 
+            div.rsvp__message__box
+                p.rsvp__message=successMessage
+        div.form__box
+            form(method="POST", id="rsvp")
+                h5 Your name
+                input(class="js-form-name",placeholder="First Name", name="firstname", type="text", required)
+                input(placeholder="Last Name", name="lastname", type="text", required)
+                input(placeholder="Email", name="email", type="email", required)
+                h5 response
+                div.index-rsvp__options
+                    input(class="hidden__input",type="hidden", name="attending")
+                    div(class="index-rsvp__option attending_yes", value="Yes", ) Joyfully Accepts 
+                    div(class="index-rsvp__option attending_no", value="No", ) Regretfully Declines
+                div(class="index-rsvp__show hidden")
+                    h5 Names of others attending        
+                    input(class="js-form-name",placeholder="List names of others attending", name="attendingList", type="text")
+                    h5 Dietary Restrictions
+                    input(placeholder="Dietary Restrictions ", name="dietary", type="text")
+                div.rsvp__submit__box
+                    input.rsvp__submit(type="submit", value="submit")
+
+
